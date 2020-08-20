@@ -9,23 +9,21 @@ import logoImg from '../../assets/images/logo.png'
 
 
 function Login() {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const history = useHistory();
 
-  async function handleRegister(e) {  //funcao para o cadastro do usuario disparada quando o form de um submit
+  async function handleRegister(e) { 
     e.preventDefault();  
 
     const data = {
-      name,
       email,
+      password,
     };
 
     try {
-      // const response = await api.post('ongs', data);// envia os dados e recebe a resposta o envio 'e' sempre que se usar o await usa-se o async antes da funçao
-      // o await é para aguardar a resposta
-      // alert(`Seu ID de acesso: ${response.data.id}`);
+      
 
       history.push('/'); 
     } catch (err) {
@@ -51,8 +49,8 @@ function Login() {
             label='E-mail'
             placeholder='Seu e-mail'
             // required
-            // value={email}
-            // onChange={(e) => { setEmail(e.target.value) }}
+            // value={name}
+            // onChange={(e) => { setName(e.target.value) }}
             />
           <Input
             type='email'
@@ -61,7 +59,7 @@ function Login() {
             placeholder='Sua senha'
             // required
             // value={avatar}
-            // onChange={(e) => { setAvatar(e.target.value) }}
+            // onChange={(e) => { setPassword(e.target.value) }}
           />
 
         </fieldset>

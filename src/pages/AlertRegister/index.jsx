@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-// import api from '../../services/api';
 import './styles.css';
 
-import bannerImg from '../../assets/images/banner.png';
 import HeaderNav from '../../components/HeaderNav'
 
 export default function AlertRegister() {

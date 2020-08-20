@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-// import api from '../../services/api';
+
 import Input from '../../components/Input'
 import './styles.css';
 
@@ -16,9 +16,9 @@ export default function Register() {
 
   const history = useHistory();
 
-  async function handleRegister(e) {  //funcao para o cadastro do usuario disparada quando o form de um submit
-    e.preventDefault();  // previne um evento padrao no carregamento da pagina
-
+  async function handleRegister(e) {  
+    e.preventDefault();  
+    
     const data = {
       name,
       email,
@@ -28,11 +28,10 @@ export default function Register() {
     };
 
     try {
-      // const response = await api.post('ongs', data);// envia os dados e recebe a resposta o envio 'e' sempre que se usar o await usa-se o async antes da funçao
-      // o await é para aguardar a resposta
-      // alert(`Seu ID de acesso: ${response.data.id}`);
+          
+      
 
-      history.push('/');  // envia de volta para o logon
+      history.push('/');  
     } catch (err) {
       alert('Erro no cadastro, tente novamente.');
     }
