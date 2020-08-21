@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import AlertRegisterRestaurant from './pages/AlertRegisterRestaurant'
 import RegisterRestaurantName from './pages/RegisterRestaurantName'
 import NewRestaurant from './pages/NewRestaurant'
+import EditRestaurant from './pages/EditRestaurant'
 
 function Routes() {
   return (
@@ -15,6 +16,7 @@ function Routes() {
       <Route path="/AlertRegisterRestaurant" component={AlertRegisterRestaurant} />
       <Route path="/RegisterRestaurantName" component={RegisterRestaurantName} />
       <Route path="/NewRestaurant" component={NewRestaurant} />
+      <Route path="/EditRestaurant" component={EditRestaurant} />
       
     </BrowserRouter>
   )

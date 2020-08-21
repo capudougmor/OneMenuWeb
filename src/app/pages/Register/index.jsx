@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 
 import Input from '../../components/core/Input'
 
-import { PageRegister, 
+import bannerImg from '../../../assets/images/banner.png';
+import RectButton from '../../components/core/RectButton';
+
+import { 
+  PageRegister, 
   Container, 
   Header, 
   Content, 
@@ -14,9 +19,6 @@ import { PageRegister,
   Fieldset, 
 } from './styles.js';
 
-import bannerImg from '../../../assets/images/banner.png';
-import RectButton from '../../components/core/RectButton';
-import { useForm } from 'react-hook-form';
 
 export default function Register() {
   

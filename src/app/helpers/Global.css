@@ -23,17 +23,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
-html, body,#root {
-  height: 100vh;
-}
-
 body {
   background: var(--background);
 }
 
 #root {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 

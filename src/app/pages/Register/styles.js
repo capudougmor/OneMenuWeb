@@ -45,7 +45,7 @@ export const Title = styled.div`
   text-align: left;
   font: 700 3rem Roboto;
   color: var(--text-primary);
-`
+  `
 
 export const SubTitle = styled.div`
   margin-top: 1.5rem;

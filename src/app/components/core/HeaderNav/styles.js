@@ -3,6 +3,7 @@ import { FiMenu } from 'react-icons/fi'
 
 export const CompHeader = styled.div`
   width: 100vw;
+  margin-bottom: 3rem;
 `
 
 export const Container = styled.div`

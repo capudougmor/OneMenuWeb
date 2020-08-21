@@ -10,7 +10,6 @@ export const InputBlock = styled.div`
 `
 export const LargeInput = styled.input`
   width: 100%;
-  min-width: 25rem;
   height: 5.6rem;
   margin-top: 0.7rem;
   border-radius: 0.8rem;

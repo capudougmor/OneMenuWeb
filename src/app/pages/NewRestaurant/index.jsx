@@ -5,8 +5,9 @@ import { Title, ImgContainer, LogoImg, IconContainer, MenuIcon, BookIcon, PenIco
 
 
 import LayoutRegisterRestaurant from '../../components/core/LayoutRegisterRestaurant'
+import Card from '../../components/core/Card/index.jsx';
 
-export default function RegisterRestaurantName() {  
+export default function NewRestauant() {  
 
   const history = useHistory();
   
@@ -16,26 +17,27 @@ export default function RegisterRestaurantName() {
 
   return (
     <LayoutRegisterRestaurant button='Cadastrar novo restaurante' type='button' >
-      <ImgContainer>
-        <LogoImg  />
-      </ImgContainer>
+      <Card >
+        <ImgContainer>
+          <LogoImg  />
+        </ImgContainer>
 
-      <Title>Nome do restaurante</Title>
+        <Title>Nome do restaurante</Title>
 
-      <IconContainer>
-        <Link to="/">
-          <MenuIcon />            
-        </Link>
+        <IconContainer>
+          <Link to="/">
+            <MenuIcon />            
+          </Link>
 
-        <Link to="/">
-          <BookIcon />            
-        </Link>
+          <Link to="/">
+            <BookIcon />            
+          </Link>
 
-        <Link to="/">
-          <PenIcon />            
-        </Link>
-      </IconContainer>    
-
+          <Link to="/">
+            <PenIcon />            
+          </Link>
+        </IconContainer>    
+      </Card>
     </LayoutRegisterRestaurant>
   );
 }
