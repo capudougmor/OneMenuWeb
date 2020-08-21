@@ -1,0 +1,59 @@
+:root {
+  font-size: 62%;
+  
+  --background: #ffffff;
+  --background-secondary: #f1f1f1;
+  --primary: #5CE1E6;
+  --secundary: #03b3ba;
+  --secundary-dark: #01a1a7;
+  --title-in-primary: #FFFFFF;
+  --text-primary: #1a1a1a;
+  --text-second: #909090;
+  --line-in-white: #c3c3c3;
+  --input-background: #F8F8FC;
+  --button-text: #FFFFFF;
+  --box-base: #FFFFFF;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body,#root {
+  height: 100vh;
+}
+
+body {
+  background: var(--background);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1.6rem Roboto;
+  color: var(--text-base);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 68%;
+  }
+}
+
+/*# sourceMappingURL=/app.e55afc9c.css.map */
