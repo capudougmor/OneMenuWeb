@@ -1,12 +1,12 @@
 import React from 'react';
-import {  } from 'react-router-dom';
 
 import { Card, Container, CardContent } from './styles.js';
 
 import HeaderNav from '../HeaderNav'
-import RectButton from '../RectButton'
+import OutsideButton from '../OutsideButton/index.jsx';
 
 export default function LayoutRegisterRestaurant({ button, children }) {
+
 
   return (
     <Card>
@@ -16,7 +16,7 @@ export default function LayoutRegisterRestaurant({ button, children }) {
           {children}
         </CardContent>
       </Container>
-      {button &&  <RectButton name={button} /> }
+      {button &&  <OutsideButton name={button} /> }
     </Card>
   );
-}
+} 

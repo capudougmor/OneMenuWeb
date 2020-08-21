@@ -24,7 +24,7 @@ export const BtnContent = styled.div`
   }  
   `
 export const LogoImage = styled.img`
-  width: 8rem;
+  width: 7rem;
   object-fit: cover;
 `
 export const MenuIcon = styled(FiMenu)`

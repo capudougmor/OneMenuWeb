@@ -16,13 +16,16 @@ export const LogoContainer = styled.div`
   align-items: center;
   justify-items: center;
   text-align: center;
-  `
+`
+
 export const LogoImg = styled.img`
-  width: 70%;
-  max-width: 40rem;
-  height: 70%;
+  width: 60%;
+  max-width: 30rem;
+  margin-top: 3rem;
+
   object-fit: cover;
-  `
+`
+
 export const Title = styled.h3`
   width: 95%;
   max-width: 35rem;
@@ -54,6 +57,7 @@ export const ForgetLink = styled.p`
 `
 
 export const BottonLink = styled.p`
+  margin-top: 5vw;
   line-height: 2.4rem;
   font: 500 1.9rem Roboto;
   color: var(--text-primary);

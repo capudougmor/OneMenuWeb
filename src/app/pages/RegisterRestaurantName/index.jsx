@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 import { Title, SubTitle } from './styles.js';
 
@@ -10,11 +9,7 @@ import LayoutRegisterRestaurant from '../../components/core/LayoutRegisterRestau
 
 export default function RegisterRestaurantName() {
 
-  const history = useHistory();
-
-  function goNewRestaurante() {  
-    history.push('/')
-  }
+  
 
   return (
     <LayoutRegisterRestaurant>
@@ -29,7 +24,7 @@ export default function RegisterRestaurantName() {
           // ref={register}                
         />
 
-      <RectButton name='Continuar' onClick={goNewRestaurante} type='button' />
+      <RectButton name='Continuar' />
 
     </LayoutRegisterRestaurant>
   );
