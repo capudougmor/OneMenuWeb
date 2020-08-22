@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.button`
   width: 100%;
   height: 5rem;
+  margin: 2rem 0;
+  padding: 2rem;
   background: var(--primary);
   color: var(--button-text);
   border: 0;
@@ -14,8 +16,6 @@ export const Container = styled.button`
   justify-content: center;
   text-decoration: none;
   transition: background-color 0.2s;
-  margin: 2rem 0;
-  transition: 0.2s;
 
   &:hover {
     background: var(--secundary-dark);

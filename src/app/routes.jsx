@@ -12,11 +12,11 @@ function Routes() {
   return (
     <BrowserRouter>
       <Route path="/" exact component={Login} />
-      <Route path="/Register" component={Register} />
-      <Route path="/AlertRegisterRestaurant" component={AlertRegisterRestaurant} />
-      <Route path="/RegisterRestaurantName" component={RegisterRestaurantName} />
-      <Route path="/NewRestaurant" component={NewRestaurant} />
-      <Route path="/EditRestaurant" component={EditRestaurant} />
+      <Route path="/register" component={Register} />
+      <Route path="/alertRegisterRestaurant" component={AlertRegisterRestaurant} />
+      <Route path="/registerRestaurantName" component={RegisterRestaurantName} />
+      <Route path="/newRestaurant" component={NewRestaurant} />
+      <Route path="/editRestaurant" component={EditRestaurant} />
       
     </BrowserRouter>
   )

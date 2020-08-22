@@ -1,31 +1,25 @@
 import React from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import { PageAlertRegister, Container, Card, Title, SubTitle } from './styles.js';
+import { PageAlertRegister, Title, SubTitle } from './styles.js';
 
-import HeaderNav from '../../components/core/HeaderNav'
+import LayoutRegisterRestaurant from '../../components/core/LayoutRegisterRestaurant/index.jsx';
+import Card from '../../components/core/Card/index.jsx';
 import RectButton from '../../components/core/RectButton'
 
 export default function AlertRegisterRestaurant() {
 
-  const history = useHistory();
-
-  function handleRegister(e) {  
-    
-  }
-
-  return (
-    <PageAlertRegister>
-      <HeaderNav />
-      <Container>
+   return (
+    <LayoutRegisterRestaurant>
+      <PageAlertRegister>
         <Card>
           <Title>Você ainda não cadastrou seu restaurante</Title>
-          <SubTitle>Clique no botão abaixo e comece agora a cadastro do seu restaurante.</SubTitle>
+          <SubTitle>Clique no botão abaixo e comece agora a cadastrar seu restaurante.</SubTitle>
           <Link to='RegisterRestaurantName'>
-            <RectButton name='Cadastrar restaurante' goPath='RegisterRestaurantName' />
+            <RectButton name='Cadastrar restaurante' />
           </Link>
         </Card>
-      </Container>
-    </PageAlertRegister>
+      </PageAlertRegister>
+    </LayoutRegisterRestaurant>
   );
 }

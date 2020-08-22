@@ -3,12 +3,10 @@ import { FaQrcode } from 'react-icons/fa'
 import { FiEdit2 } from 'react-icons/fi'
 import { FiBookOpen } from 'react-icons/fi'
 
-export const Title = styled.div`
-  margin-top: 2.4rem;
-  font-family: 'Roboto';
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
+export const Container = styled.div`
+  width: 90vw;
+  height: 100vh;
+  max-width: 38rem; 
 `
 
 export const ImgContainer = styled.div`
@@ -21,8 +19,12 @@ export const ImgContainer = styled.div`
   border-radius: 50%;
 `
 
-export const LogoImg = styled.img`
-  
+export const Title = styled.div`
+  margin-top: 2.4rem;
+  font-family: 'Roboto';
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
 `
 
 export const IconContainer = styled.div`
@@ -59,24 +61,4 @@ export const PenIcon = styled(FiEdit2)`
   height: 3rem;
   color: #fff
 `
-export const Button = styled.button`
-  width: 100%;
-  height: 5rem;
-  background: var(--primary);
-  color: var(--button-text);
-  border: 0;
-  border-radius: 0.8rem;
-  cursor: pointer;
-  font: 700 1.8rem Roboto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background-color 0.2s;
-  margin: 2rem 0;
-  transition: 0.2s;
 
-  &:hover {
-    background: var(--secundary-dark);
-  }
-`

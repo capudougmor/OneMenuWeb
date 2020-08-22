@@ -19,10 +19,6 @@ export default function Login() {
     history.push('/AlertRegisterRestaurant')
   }
 
-  function noRegister() {
-    history.push('/AlertRegister')
-  }
-
   return (
     <PageLogin>
       <LogoContainer>
@@ -39,6 +35,7 @@ export default function Login() {
             name='email'
             label='E-mail'
             placeholder='Seu e-mail'
+            required
             ref={register}
           />
           <Input
@@ -46,6 +43,7 @@ export default function Login() {
             name='password'
             label='Senha'
             placeholder='Sua senha'
+            required
             ref={register}
           />
 

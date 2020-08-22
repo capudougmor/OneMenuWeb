@@ -37620,32 +37620,29 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("./styles.js");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-var Input = function Input(_ref) {
+var Input = function Input(_ref, ref) {
   var label = _ref.label,
       name = _ref.name,
-      rest = _objectWithoutProperties(_ref, ["label", "name"]);
-
-  return /*#__PURE__*/_react.default.createElement(_styles.InputBlock, null, /*#__PURE__*/_react.default.createElement("label", {
-    htmlFor: name
-  }, label), /*#__PURE__*/_react.default.createElement(_styles.LargeInput, _extends({
-    type: "text",
-    id: name
-  }, rest)));
+      type = _ref.type,
+      placeholder = _ref.placeholder;
+  return /*#__PURE__*/_react.default.createElement(_styles.InputBlock, null, /*#__PURE__*/_react.default.createElement("label", null, label), /*#__PURE__*/_react.default.createElement(_styles.LargeInput, {
+    type: type,
+    name: name,
+    ref: ref,
+    placeholder: placeholder
+  }));
 };
 
-var _default = Input;
+var forwaredInput = (0, _react.forwardRef)(Input);
+var _default = forwaredInput;
 exports.default = _default;
 },{"react":"../../node_modules/react/index.js","./styles.js":"../app/components/core/Input/styles.js"}],"../app/components/core/RectButton/styles.js":[function(require,module,exports) {
 "use strict";
@@ -37660,7 +37657,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 5rem;\n  background: var(--primary);\n  color: var(--button-text);\n  border: 0;\n  border-radius: 0.8rem;\n  cursor: pointer;\n  font: 700 1.8rem Roboto;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-decoration: none;\n  transition: background-color 0.2s;\n  margin: 2rem 0;\n  transition: 0.2s;\n\n  &:hover {\n    background: var(--secundary-dark);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 5rem;\n  margin: 2rem 0;\n  padding: 2rem;\n  background: var(--primary);\n  color: var(--button-text);\n  border: 0;\n  border-radius: 0.8rem;\n  cursor: pointer;\n  font: 700 1.8rem Roboto;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-decoration: none;\n  transition: background-color 0.2s;\n\n  &:hover {\n    background: var(--secundary-dark);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37741,10 +37738,6 @@ function Login() {
     history.push('/AlertRegisterRestaurant');
   };
 
-  function noRegister() {
-    history.push('/AlertRegister');
-  }
-
   return /*#__PURE__*/_react.default.createElement(_styles.PageLogin, null, /*#__PURE__*/_react.default.createElement(_styles.LogoContainer, null, /*#__PURE__*/_react.default.createElement(_styles.LogoImg, {
     src: _logo.default,
     alt: "OneMenu"
@@ -37755,12 +37748,14 @@ function Login() {
     name: "email",
     label: "E-mail",
     placeholder: "Seu e-mail",
+    required: true,
     ref: register
   }), /*#__PURE__*/_react.default.createElement(_Input.default, {
     type: "password",
     name: "password",
     label: "Senha",
     placeholder: "Sua senha",
+    required: true,
     ref: register
   })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "Register"
@@ -37994,34 +37989,14 @@ function Register() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SubTitle = exports.Title = exports.Card = exports.Container = exports.PageAlertRegister = void 0;
+exports.SubTitle = exports.Title = exports.PageAlertRegister = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  text-align: center;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 26rem;\n  margin-top: 3rem;\n  text-align: center;\n  font: 700 2.2rem Roboto;\n  color: var(--text-primary);\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  padding: 3.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-items: center;\n  background-color: var(--background);\n  border-radius: 8px;\n\n  > a {\n    width: 24rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  text-align: center;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -38031,7 +38006,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 90%;\n  max-width: 38rem; \n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 26rem;\n  margin-top: 3rem;\n  text-align: center;\n  font: 700 2.2rem Roboto;\n  color: var(--text-primary);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -38041,7 +38016,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-items: start;\n  background-color: var(--background-secondary);\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  height: 100vh;\n  max-width: 38rem; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -38056,21 +38031,40 @@ var PageAlertRegister = _styledComponents.default.div(_templateObject());
 
 exports.PageAlertRegister = PageAlertRegister;
 
-var Container = _styledComponents.default.div(_templateObject2());
-
-exports.Container = Container;
-
-var Card = _styledComponents.default.div(_templateObject3());
-
-exports.Card = Card;
-
-var Title = _styledComponents.default.div(_templateObject4());
+var Title = _styledComponents.default.div(_templateObject2());
 
 exports.Title = Title;
 
-var SubTitle = _styledComponents.default.div(_templateObject5());
+var SubTitle = _styledComponents.default.div(_templateObject3());
 
 exports.SubTitle = SubTitle;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/LayoutRegisterRestaurant/styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.LayoutContainer = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  justify-items: start;\n  background-color: var(--background-secondary);\n\n  /* > button {\n    width: 90%;\n    max-width: 38rem;\n  }\n   */\n  \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var LayoutContainer = _styledComponents.default.div(_templateObject());
+
+exports.LayoutContainer = LayoutContainer;
 },{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../../node_modules/react-icons/lib/esm/iconsManifest.js":[function(require,module,exports) {
 "use strict";
 
@@ -48535,7 +48529,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  margin-bottom: 3rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin-bottom: 3rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -48591,107 +48585,28 @@ function HeaderNav() {
     alt: "logo"
   })), /*#__PURE__*/_react.default.createElement(_styles.MenuIcon, null))));
 }
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles":"../app/components/core/HeaderNav/styles.js","../../../../assets/images/BlueIcon.png":"images/BlueIcon.png"}],"../app/pages/AlertRegisterRestaurant/index.jsx":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles":"../app/components/core/HeaderNav/styles.js","../../../../assets/images/BlueIcon.png":"images/BlueIcon.png"}],"../app/components/core/LayoutRegisterRestaurant/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = AlertRegisterRestaurant;
+exports.default = LayoutRegisterRestaurant;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactRouterDom = require("react-router-dom");
-
 var _styles = require("./styles.js");
 
-var _HeaderNav = _interopRequireDefault(require("../../components/core/HeaderNav"));
-
-var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
+var _HeaderNav = _interopRequireDefault(require("../HeaderNav"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function AlertRegisterRestaurant() {
-  var history = (0, _reactRouterDom.useHistory)();
-
-  function handleRegister(e) {}
-
-  return /*#__PURE__*/_react.default.createElement(_styles.PageAlertRegister, null, /*#__PURE__*/_react.default.createElement(_HeaderNav.default, null), /*#__PURE__*/_react.default.createElement(_styles.Container, null, /*#__PURE__*/_react.default.createElement(_styles.Card, null, /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Voc\xEA ainda n\xE3o cadastrou seu restaurante"), /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Clique no bot\xE3o abaixo e comece agora a cadastro do seu restaurante."), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "RegisterRestaurantName"
-  }, /*#__PURE__*/_react.default.createElement(_RectButton.default, {
-    name: "Cadastrar restaurante",
-    goPath: "RegisterRestaurantName"
-  })))));
+function LayoutRegisterRestaurant(_ref) {
+  var button = _ref.button,
+      children = _ref.children;
+  return /*#__PURE__*/_react.default.createElement(_styles.LayoutContainer, null, /*#__PURE__*/_react.default.createElement(_HeaderNav.default, null), children);
 }
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/pages/AlertRegisterRestaurant/styles.js","../../components/core/HeaderNav":"../app/components/core/HeaderNav/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx"}],"../app/pages/RegisterRestaurantName/styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.SubTitle = exports.Title = void 0;
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  margin-bottom: 3rem;\n  text-align: left;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n  "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  font-family: 'Roboto';\n  font-size: 2.9rem;\n  font-weight: 700;\n  color: var(--text-primary);\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Title = _styledComponents.default.div(_templateObject());
-
-exports.Title = Title;
-
-var SubTitle = _styledComponents.default.div(_templateObject2());
-
-exports.SubTitle = SubTitle;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/LayoutRegisterRestaurant/styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.LayoutContainer = void 0;
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  justify-items: start;\n  background-color: var(--background-secondary);\n\n  > button {\n    width: 90%;\n    max-width: 38rem;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var LayoutContainer = _styledComponents.default.div(_templateObject());
-
-exports.LayoutContainer = LayoutContainer;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/Card/styles.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","./styles.js":"../app/components/core/LayoutRegisterRestaurant/styles.js","../HeaderNav":"../app/components/core/HeaderNav/index.jsx"}],"../app/components/core/Card/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48823,32 +48738,148 @@ function Card(_ref) {
       children = _ref.children;
   return /*#__PURE__*/_react.default.createElement(_styles.Container, null, /*#__PURE__*/_react.default.createElement(_styles.CardContent, null, children));
 }
-},{"react":"../../node_modules/react/index.js","./styles.js":"../app/components/core/Card/styles.js","../HeaderNav":"../app/components/core/HeaderNav/index.jsx","../OutsideButton/index.jsx":"../app/components/core/OutsideButton/index.jsx"}],"../app/components/core/LayoutRegisterRestaurant/index.jsx":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","./styles.js":"../app/components/core/Card/styles.js","../HeaderNav":"../app/components/core/HeaderNav/index.jsx","../OutsideButton/index.jsx":"../app/components/core/OutsideButton/index.jsx"}],"../app/pages/AlertRegisterRestaurant/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = LayoutRegisterRestaurant;
+exports.default = AlertRegisterRestaurant;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactRouterDom = require("react-router-dom");
+
 var _styles = require("./styles.js");
 
-var _HeaderNav = _interopRequireDefault(require("../HeaderNav"));
+var _index = _interopRequireDefault(require("../../components/core/LayoutRegisterRestaurant/index.jsx"));
 
-var _index = _interopRequireDefault(require("../Card/index.jsx"));
+var _index2 = _interopRequireDefault(require("../../components/core/Card/index.jsx"));
 
-var _index2 = _interopRequireDefault(require("../OutsideButton/index.jsx"));
+var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function LayoutRegisterRestaurant(_ref) {
-  var button = _ref.button,
-      children = _ref.children;
-  return /*#__PURE__*/_react.default.createElement(_styles.LayoutContainer, null, /*#__PURE__*/_react.default.createElement(_HeaderNav.default, null), children);
+function AlertRegisterRestaurant() {
+  return /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_styles.PageAlertRegister, null, /*#__PURE__*/_react.default.createElement(_index2.default, null, /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Voc\xEA ainda n\xE3o cadastrou seu restaurante"), /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Clique no bot\xE3o abaixo e comece agora a cadastrar seu restaurante."), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "RegisterRestaurantName"
+  }, /*#__PURE__*/_react.default.createElement(_RectButton.default, {
+    name: "Cadastrar restaurante"
+  })))));
 }
-},{"react":"../../node_modules/react/index.js","./styles.js":"../app/components/core/LayoutRegisterRestaurant/styles.js","../HeaderNav":"../app/components/core/HeaderNav/index.jsx","../Card/index.jsx":"../app/components/core/Card/index.jsx","../OutsideButton/index.jsx":"../app/components/core/OutsideButton/index.jsx"}],"../app/pages/RegisterRestaurantName/index.jsx":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/pages/AlertRegisterRestaurant/styles.js","../../components/core/LayoutRegisterRestaurant/index.jsx":"../app/components/core/LayoutRegisterRestaurant/index.jsx","../../components/core/Card/index.jsx":"../app/components/core/Card/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx"}],"../app/hooks/Context/Provider.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useProfile = useProfile;
+exports.ProfileProvider = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var ProfileContext = (0, _react.createContext)();
+
+var ProfileProvider = function ProfileProvider(_ref) {
+  var children = _ref.children;
+
+  var _useState = (0, _react.useState)(),
+      _useState2 = _slicedToArray(_useState, 2),
+      name = _useState2[0],
+      setName = _useState2[1];
+
+  return /*#__PURE__*/_react.default.createElement(ProfileContext.Provider, {
+    value: {
+      name: name,
+      setName: setName
+    }
+  }, children);
+};
+
+exports.ProfileProvider = ProfileProvider;
+
+function useProfile() {
+  var context = (0, _react.useContext)(ProfileContext);
+  if (!context) throw new Error("useProfile must be used within a ProfilePrivider");
+  var name = context.name,
+      setName = context.setName;
+  return {
+    name: name,
+    setName: setName
+  };
+}
+},{"react":"../../node_modules/react/index.js"}],"../app/pages/RegisterRestaurantName/styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SubTitle = exports.Title = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  margin-bottom: 3rem;\n  text-align: left;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  font-family: 'Roboto';\n  font-size: 2.9rem;\n  font-weight: 700;\n  color: var(--text-primary);\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  height: 100vh;\n  max-width: 38rem; \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Title = _styledComponents.default.div(_templateObject2());
+
+exports.Title = Title;
+
+var SubTitle = _styledComponents.default.div(_templateObject3());
+
+exports.SubTitle = SubTitle;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/pages/RegisterRestaurantName/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48858,6 +48889,12 @@ exports.default = RegisterRestaurantName;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactHookForm = require("react-hook-form");
+
+var _Provider = require("../../hooks/Context/Provider");
+
+var _reactRouterDom = require("react-router-dom");
+
 var _styles = require("./styles.js");
 
 var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
@@ -48866,21 +48903,43 @@ var _Input = _interopRequireDefault(require("../../components/core/Input"));
 
 var _LayoutRegisterRestaurant = _interopRequireDefault(require("../../components/core/LayoutRegisterRestaurant"));
 
+var _index = _interopRequireDefault(require("../../components/core/Card/index.jsx"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function RegisterRestaurantName() {
-  return /*#__PURE__*/_react.default.createElement(_LayoutRegisterRestaurant.default, null, /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Cadastro de restaurante"), /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Coloque abaixo o nome do seu estabelecimento."), /*#__PURE__*/_react.default.createElement(_Input.default, {
+  var _useProfile = (0, _Provider.useProfile)('restaurante'),
+      name = _useProfile.name,
+      setName = _useProfile.setName;
+
+  var _useForm = (0, _reactHookForm.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      errors = _useForm.errors;
+
+  var history = (0, _reactRouterDom.useHistory)();
+
+  var onSubmit = function onSubmit(data) {
+    setName(data.name);
+    console.log(name);
+    history.push('/newRestaurant');
+  };
+
+  return /*#__PURE__*/_react.default.createElement(_LayoutRegisterRestaurant.default, null, /*#__PURE__*/_react.default.createElement(_styles.Container, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Cadastro de restaurante"), /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Coloque abaixo o nome do seu estabelecimento."), /*#__PURE__*/_react.default.createElement("form", {
+    onSubmit: handleSubmit(onSubmit)
+  }, /*#__PURE__*/_react.default.createElement(_Input.default, {
     type: "text",
     name: "name",
     label: "Nome do seu restaurante",
     placeholder: "Nome do seu restaurante" // required
-    // ref={register}                
-
+    ,
+    ref: register
   }), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
-    name: "Continuar"
-  }));
+    name: "Continuar",
+    type: "submit"
+  })))));
 }
-},{"react":"../../node_modules/react/index.js","./styles.js":"../app/pages/RegisterRestaurantName/styles.js","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx","../../components/core/Input":"../app/components/core/Input/index.jsx","../../components/core/LayoutRegisterRestaurant":"../app/components/core/LayoutRegisterRestaurant/index.jsx"}],"../../node_modules/react-icons/fa/index.esm.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","../../hooks/Context/Provider":"../app/hooks/Context/Provider.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/pages/RegisterRestaurantName/styles.js","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx","../../components/core/Input":"../app/components/core/Input/index.jsx","../../components/core/LayoutRegisterRestaurant":"../app/components/core/LayoutRegisterRestaurant/index.jsx","../../components/core/Card/index.jsx":"../app/components/core/Card/index.jsx"}],"../../node_modules/react-icons/fa/index.esm.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -76957,7 +77016,7 @@ function FaRegWindowRestore(props) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.PenIcon = exports.BookIcon = exports.MenuIcon = exports.IconContainer = exports.LogoImg = exports.ImgContainer = exports.Title = void 0;
+exports.PenIcon = exports.BookIcon = exports.MenuIcon = exports.IconContainer = exports.Title = exports.ImgContainer = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -76966,16 +77025,6 @@ var _fa = require("react-icons/fa");
 var _fi = require("react-icons/fi");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 5rem;\n  background: var(--primary);\n  color: var(--button-text);\n  border: 0;\n  border-radius: 0.8rem;\n  cursor: pointer;\n  font: 700 1.8rem Roboto;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-decoration: none;\n  transition: background-color 0.2s;\n  margin: 2rem 0;\n  transition: 0.2s;\n\n  &:hover {\n    background: var(--secundary-dark);\n  }\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n  width: 3rem;\n  height: 3rem;\n  color: #fff\n"]);
@@ -77018,7 +77067,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 2.4rem;\n  font-family: 'Roboto';\n  font-size: 2.1rem;\n  font-weight: 700;\n  color: var(--text-primary);\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -77038,7 +77087,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 2.4rem;\n  font-family: 'Roboto';\n  font-size: 2.1rem;\n  font-weight: 700;\n  color: var(--text-primary);\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  height: 100vh;\n  max-width: 38rem; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -77049,17 +77098,17 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Title = _styledComponents.default.div(_templateObject());
+var Container = _styledComponents.default.div(_templateObject());
 
-exports.Title = Title;
+exports.Container = Container;
 
 var ImgContainer = _styledComponents.default.div(_templateObject2());
 
 exports.ImgContainer = ImgContainer;
 
-var LogoImg = _styledComponents.default.img(_templateObject3());
+var Title = _styledComponents.default.div(_templateObject3());
 
-exports.LogoImg = LogoImg;
+exports.Title = Title;
 
 var IconContainer = _styledComponents.default.div(_templateObject4());
 
@@ -77070,10 +77119,6 @@ var BookIcon = (0, _styledComponents.default)(_fi.FiBookOpen)(_templateObject6()
 exports.BookIcon = BookIcon;
 var PenIcon = (0, _styledComponents.default)(_fi.FiEdit2)(_templateObject7());
 exports.PenIcon = PenIcon;
-
-var Button = _styledComponents.default.button(_templateObject8());
-
-exports.Button = Button;
 },{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","react-icons/fa":"../../node_modules/react-icons/fa/index.esm.js","react-icons/fi":"../../node_modules/react-icons/fi/index.esm.js"}],"../app/pages/NewRestaurant/index.jsx":[function(require,module,exports) {
 "use strict";
 
@@ -77086,46 +77131,93 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _Provider = require("../../hooks/Context/Provider");
+
 var _styles = require("./styles.js");
 
 var _LayoutRegisterRestaurant = _interopRequireDefault(require("../../components/core/LayoutRegisterRestaurant"));
 
 var _index = _interopRequireDefault(require("../../components/core/Card/index.jsx"));
 
+var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function NewRestauant() {
-  var history = (0, _reactRouterDom.useHistory)();
+  var _useProfile = (0, _Provider.useProfile)(),
+      name = _useProfile.name,
+      setName = _useProfile.setName;
 
-  function goTo() {
-    history.push('/');
-  }
+  var history = (0, _reactRouterDom.useHistory)(); // function goTo() {
+  //   history.push('/')
+  // }
 
-  return /*#__PURE__*/_react.default.createElement(_LayoutRegisterRestaurant.default, {
-    button: "Cadastrar novo restaurante",
-    type: "button"
-  }, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_styles.ImgContainer, null, /*#__PURE__*/_react.default.createElement(_styles.LogoImg, null)), /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Nome do restaurante"), /*#__PURE__*/_react.default.createElement(_styles.IconContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return /*#__PURE__*/_react.default.createElement(_LayoutRegisterRestaurant.default, null, /*#__PURE__*/_react.default.createElement(_styles.Container, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_styles.ImgContainer, null), !name && /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Nome do restaurante"), /*#__PURE__*/_react.default.createElement(_styles.Title, null, name), /*#__PURE__*/_react.default.createElement(_styles.IconContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, /*#__PURE__*/_react.default.createElement(_styles.MenuIcon, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, /*#__PURE__*/_react.default.createElement(_styles.BookIcon, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_styles.PenIcon, null)))));
+  }, /*#__PURE__*/_react.default.createElement(_styles.PenIcon, null)))), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
+    name: "Castrar novo restaurante"
+  })));
 }
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/pages/NewRestaurant/styles.js","../../components/core/LayoutRegisterRestaurant":"../app/components/core/LayoutRegisterRestaurant/index.jsx","../../components/core/Card/index.jsx":"../app/components/core/Card/index.jsx"}],"../app/pages/EditRestaurant/styles.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","../../hooks/Context/Provider":"../app/hooks/Context/Provider.js","./styles.js":"../app/pages/NewRestaurant/styles.js","../../components/core/LayoutRegisterRestaurant":"../app/components/core/LayoutRegisterRestaurant/index.jsx","../../components/core/Card/index.jsx":"../app/components/core/Card/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx"}],"../app/pages/EditRestaurant/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CheckContent = exports.ScheduleDay = exports.Fieldset = exports.SubTitle = exports.Title = void 0;
+exports.SomaIcon = exports.SubIcon = exports.IconContainer = exports.CheckContent = exports.ScheduleDay = exports.Fieldset = exports.SubTitle = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _fa = require("react-icons/fa");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  width: 1.3rem;\n  height: 1.3rem;\n  color: #fff\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  width: 1.3rem;\n  height: 1.3rem;\n  color: #fff\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n\n  > a {\n    width: 2.3rem;\n    height: 2.3rem;\n    background: var(--text-primary);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 6px;\n    margin-top: 8px;\n  }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  width: 3rem;\n  height: 8rem;\n  display: flex;\n\n  > input {\n    width: 2.3rem;\n    height: 2.3rem;\n    cursor: pointer;\n  }  \n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  width: 10rem;\n  height: 8rem;\n  display: flex;\n  justify-content: center;\n\n  > input {\n    width: 2.3rem;\n    height: 2.3rem;\n    cursor: pointer;\n    margin-right: 3;\n  }  \n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 38rem;\n  display: grid;\n  grid-template-columns: 20px 1fr 1fr 1fr;\n  gap: 1.2rem;\n  align-items: end;\n  padding-bottom: 4rem;\n  border-bottom: 1px solid var(--line-in-white);\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -77135,7 +77227,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 38rem;\n  display: flex;\n  justify-items: space-between;\n  align-items: flex-end;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  border: 0;\n  margin-top: 4rem;\n  margin-bottom: 1.6rem;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -77145,7 +77237,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  border: 0;\n  margin-top: 4rem;\n  margin-bottom: 1.6rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: left;\n  font: 700 2.1rem Roboto;\n  color: var(--text-primary);\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -77155,7 +77247,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  text-align: left;\n  font: 700 2.1rem Roboto;\n  color: var(--text-primary);\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  font-family: 'Roboto';\n  font-size: 3rem;\n  font-weight: 700;\n  text-align: left;\n  color: var(--text-primary);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -77165,7 +77257,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  font-family: 'Roboto';\n  font-size: 3rem;\n  font-weight: 700;\n  text-align: left;\n  color: var(--text-primary);\n"]);
+  var data = _taggedTemplateLiteral(["\n  \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -77176,26 +77268,38 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Title = _styledComponents.default.h2(_templateObject());
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Title = _styledComponents.default.h2(_templateObject2());
 
 exports.Title = Title;
 
-var SubTitle = _styledComponents.default.div(_templateObject2());
+var SubTitle = _styledComponents.default.div(_templateObject3());
 
 exports.SubTitle = SubTitle;
 
-var Fieldset = _styledComponents.default.div(_templateObject3());
+var Fieldset = _styledComponents.default.div(_templateObject4());
 
 exports.Fieldset = Fieldset;
 
-var ScheduleDay = _styledComponents.default.div(_templateObject4());
+var ScheduleDay = _styledComponents.default.div(_templateObject5());
 
 exports.ScheduleDay = ScheduleDay;
 
-var CheckContent = _styledComponents.default.div(_templateObject5());
+var CheckContent = _styledComponents.default.div(_templateObject6());
 
 exports.CheckContent = CheckContent;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/pages/EditRestaurant/index.jsx":[function(require,module,exports) {
+
+var IconContainer = _styledComponents.default.div(_templateObject7());
+
+exports.IconContainer = IconContainer;
+var SubIcon = (0, _styledComponents.default)(_fa.FaMinus)(_templateObject8());
+exports.SubIcon = SubIcon;
+var SomaIcon = (0, _styledComponents.default)(_fa.FaPlus)(_templateObject9());
+exports.SomaIcon = SomaIcon;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","react-icons/fa":"../../node_modules/react-icons/fa/index.esm.js"}],"../app/pages/EditRestaurant/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -77237,7 +77341,7 @@ function EditRestaurant() {
     history.push('/AlertRegister');
   }
 
-  return /*#__PURE__*/_react.default.createElement(_LayoutRegisterRestaurant.default, null, /*#__PURE__*/_react.default.createElement("form", {
+  return /*#__PURE__*/_react.default.createElement(_LayoutRegisterRestaurant.default, null, /*#__PURE__*/_react.default.createElement(_styles.Container, null, /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit(onSubmit)
   }, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Crie sua conta"), /*#__PURE__*/_react.default.createElement(_styles.Fieldset, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
     type: "text",
@@ -77305,9 +77409,13 @@ function EditRestaurant() {
     placeholder: "Fecha" // required
     ,
     ref: register
-  }))), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
+  }), /*#__PURE__*/_react.default.createElement(_styles.IconContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_styles.SubIcon, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_styles.SomaIcon, null))))), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
     name: "Continuar"
-  })));
+  }))));
 }
 },{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","./styles.js":"../app/pages/EditRestaurant/styles.js","../../components/core/LayoutRegisterRestaurant":"../app/components/core/LayoutRegisterRestaurant/index.jsx","../../components/core/Card/index.jsx":"../app/components/core/Card/index.jsx","../../components/core/Input/index.jsx":"../app/components/core/Input/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx"}],"../app/routes.jsx":[function(require,module,exports) {
 "use strict";
@@ -77341,19 +77449,19 @@ function Routes() {
     exact: true,
     component: _Login.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/Register",
+    path: "/register",
     component: _Register.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/AlertRegisterRestaurant",
+    path: "/alertRegisterRestaurant",
     component: _AlertRegisterRestaurant.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/RegisterRestaurantName",
+    path: "/registerRestaurantName",
     component: _RegisterRestaurantName.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/NewRestaurant",
+    path: "/newRestaurant",
     component: _NewRestaurant.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/EditRestaurant",
+    path: "/editRestaurant",
     component: _EditRestaurant.default
   }));
 }
@@ -77374,15 +77482,17 @@ require("../app/helpers/Global.css");
 
 var _routes = _interopRequireDefault(require("./routes"));
 
+var _Provider = require("../../src/app/hooks/Context/Provider");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_routes.default, null);
+  return /*#__PURE__*/_react.default.createElement(_Provider.ProfileProvider, null, /*#__PURE__*/_react.default.createElement(_routes.default, null));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","../app/helpers/Global.css":"../app/helpers/Global.css","./routes":"../app/routes.jsx"}],"../app/index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","../app/helpers/Global.css":"../app/helpers/Global.css","./routes":"../app/routes.jsx","../../src/app/hooks/Context/Provider":"../app/hooks/Context/Provider.js"}],"../app/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -77422,7 +77532,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55006" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54696" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

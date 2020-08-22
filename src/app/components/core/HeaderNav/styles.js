@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { FiMenu } from 'react-icons/fi'
 
 export const CompHeader = styled.div`
-  width: 100vw;
+  width: 100%;
   margin-bottom: 3rem;
 `
 

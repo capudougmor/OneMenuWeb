@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+export const Container = styled.div`
+  width: 90vw;
+  height: 100vh;
+  max-width: 38rem; 
+`
+
 export const Title = styled.div`
   margin-top: 3rem;
   font-family: 'Roboto';

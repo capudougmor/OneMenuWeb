@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 import { InputBlock, LargeInput } from './styles.js'
 
-const Input = ({ label, name, ...rest }) => {
+const Input = ({ label, name, type, placeholder }, ref ) => {
   return (
     <InputBlock>
-      <label htmlFor={name}>{label}</label>
-      <LargeInput type="text" id={name} {...rest} />
+      <label>{label}</label>
+      <LargeInput type={type} name={name} ref={ref} placeholder={placeholder} />
     </InputBlock>
   )
 }
 
-export default Input 
+const forwaredInput = forwardRef(Input)
+
+export default forwaredInput

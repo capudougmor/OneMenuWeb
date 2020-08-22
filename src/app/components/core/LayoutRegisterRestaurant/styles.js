@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const LayoutContainer = styled.div`
+
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -8,10 +9,12 @@ export const LayoutContainer = styled.div`
   justify-items: start;
   background-color: var(--background-secondary);
 
-  > button {
+  /* > button {
     width: 90%;
     max-width: 38rem;
   }
+   */
+  
 `
 
 
