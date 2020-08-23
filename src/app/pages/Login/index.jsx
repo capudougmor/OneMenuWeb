@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { PageLogin, LogoContainer, Form, Fieldset, BottonLink, LogoImg, Title, ForgetLink } from './styles.js'
 import Input from '../../components/core/Input'
 import RectButton from '../../components/core/RectButton'
+import EyeToggleInput from '../../components/core/EyeToggleInput'
 
 import logoImg from '../../../assets/images/logo.png'
 
@@ -38,7 +39,7 @@ export default function Login() {
             required
             ref={register}
           />
-          <Input
+          <EyeToggleInput
             type='password'
             name='password'
             label='Senha'

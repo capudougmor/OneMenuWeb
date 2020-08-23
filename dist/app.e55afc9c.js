@@ -37700,372 +37700,7 @@ var RectButton = function RectButton(_ref) {
 
 var _default = RectButton;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/components/core/RectButton/styles.js"}],"images/logo.png":[function(require,module,exports) {
-module.exports = "/logo.6023b87e.png";
-},{}],"../app/pages/Login/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Login;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _reactHookForm = require("react-hook-form");
-
-var _styles = require("./styles.js");
-
-var _Input = _interopRequireDefault(require("../../components/core/Input"));
-
-var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
-
-var _logo = _interopRequireDefault(require("../../../assets/images/logo.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Login() {
-  var _useForm = (0, _reactHookForm.useForm)(),
-      register = _useForm.register,
-      handleSubmit = _useForm.handleSubmit,
-      errors = _useForm.errors;
-
-  var history = (0, _reactRouterDom.useHistory)();
-
-  var onSubmit = function onSubmit(data) {
-    history.push('/AlertRegisterRestaurant');
-  };
-
-  return /*#__PURE__*/_react.default.createElement(_styles.PageLogin, null, /*#__PURE__*/_react.default.createElement(_styles.LogoContainer, null, /*#__PURE__*/_react.default.createElement(_styles.LogoImg, {
-    src: _logo.default,
-    alt: "OneMenu"
-  }), /*#__PURE__*/_react.default.createElement(_styles.Title, null, "O app que conecta voc\xEA ao seu cliente de maneira f\xE1cil e segura")), /*#__PURE__*/_react.default.createElement(_styles.Form, {
-    onSubmit: handleSubmit(onSubmit)
-  }, /*#__PURE__*/_react.default.createElement(_styles.Fieldset, null, /*#__PURE__*/_react.default.createElement(_Input.default, {
-    type: "email",
-    name: "email",
-    label: "E-mail",
-    placeholder: "Seu e-mail",
-    required: true,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    type: "password",
-    name: "password",
-    label: "Senha",
-    placeholder: "Sua senha",
-    required: true,
-    ref: register
-  })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "Register"
-  }, /*#__PURE__*/_react.default.createElement(_styles.ForgetLink, null, "Esqueci meu e-mail ou senha")), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
-    name: "Entrar"
-  })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "Register"
-  }, /*#__PURE__*/_react.default.createElement(_styles.BottonLink, null, "Cadastre seu restaurante agora.")));
-}
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","./styles.js":"../app/pages/Login/styles.js","../../components/core/Input":"../app/components/core/Input/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx","../../../assets/images/logo.png":"images/logo.png"}],"images/banner.png":[function(require,module,exports) {
-module.exports = "/banner.d99271e5.png";
-},{}],"../app/pages/Register/styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Fieldset = exports.SubTitle = exports.Title = exports.Content = exports.BannerImg = exports.Header = exports.Container = exports.PageRegister = void 0;
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  border: 0;\n  margin-top: 4.2rem;\n  margin-bottom: 1.6rem;\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 1.5rem;\n  text-align: left;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin-top: 8rem;\n  text-align: left;\n  font: 700 3rem Roboto;\n  color: var(--text-primary);\n  "]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  width: 90%;\n  max-width: 38rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;  \n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 34rem;\n  object-fit: cover;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  background: var(--primary);\n  display: flex;\n  align-items: center;\n  justify-content: center;  \n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 90%;\n  max-width: 38rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;  \n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: start;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var PageRegister = _styledComponents.default.div(_templateObject());
-
-exports.PageRegister = PageRegister;
-
-var Container = _styledComponents.default.div(_templateObject2());
-
-exports.Container = Container;
-
-var Header = _styledComponents.default.div(_templateObject3());
-
-exports.Header = Header;
-
-var BannerImg = _styledComponents.default.img(_templateObject4());
-
-exports.BannerImg = BannerImg;
-
-var Content = _styledComponents.default.div(_templateObject5());
-
-exports.Content = Content;
-
-var Title = _styledComponents.default.div(_templateObject6());
-
-exports.Title = Title;
-
-var SubTitle = _styledComponents.default.div(_templateObject7());
-
-exports.SubTitle = SubTitle;
-
-var Fieldset = _styledComponents.default.div(_templateObject8());
-
-exports.Fieldset = Fieldset;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/pages/Register/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Register;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _reactHookForm = require("react-hook-form");
-
-var _Input = _interopRequireDefault(require("../../components/core/Input"));
-
-var _banner = _interopRequireDefault(require("../../../assets/images/banner.png"));
-
-var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
-
-var _styles = require("./styles.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function Register() {
-  var _useForm = (0, _reactHookForm.useForm)(),
-      register = _useForm.register,
-      handleSubmit = _useForm.handleSubmit,
-      errors = _useForm.errors;
-
-  var history = (0, _reactRouterDom.useHistory)();
-
-  var onSubmit = function onSubmit(data) {
-    history.push('/');
-  };
-
-  function noRegister() {
-    history.push('/AlertRegister');
-  }
-
-  return /*#__PURE__*/_react.default.createElement(_styles.PageRegister, null, /*#__PURE__*/_react.default.createElement(_styles.Header, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    id: "home-link",
-    to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_styles.BannerImg, {
-    src: _banner.default,
-    alt: "banner onemenu"
-  }))), /*#__PURE__*/_react.default.createElement(_styles.Container, null, /*#__PURE__*/_react.default.createElement(_styles.Content, null, /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Crie sua conta"), /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Cria seu conta para iniciar o cadastro do seu restaurante."), /*#__PURE__*/_react.default.createElement("form", {
-    onSubmit: handleSubmit(onSubmit)
-  }, /*#__PURE__*/_react.default.createElement(_styles.Fieldset, null, /*#__PURE__*/_react.default.createElement(_Input.default, {
-    type: "text",
-    name: "name",
-    label: "Nome",
-    placeholder: "Seu nome completo" // required
-    ,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    type: "email",
-    name: "email",
-    label: "E-mail",
-    placeholder: "Seu e-mail" // required
-    ,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    type: "email",
-    name: "confEmail",
-    label: "Confirma\xE7\xE3o de e-mail",
-    placeholder: "Seu e-mail" // required
-    ,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    type: "password",
-    name: "password",
-    label: "Senha",
-    placeholder: "Sua senha" // required
-    ,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
-    type: "password",
-    name: "confPassword",
-    label: "Confirma\xE7\xE3o de senha",
-    placeholder: "Sua senha" // required
-    ,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
-    name: "Continuar"
-  }))))));
-}
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","../../components/core/Input":"../app/components/core/Input/index.jsx","../../../assets/images/banner.png":"images/banner.png","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx","./styles.js":"../app/pages/Register/styles.js"}],"../app/pages/AlertRegisterRestaurant/styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.SubTitle = exports.Title = exports.PageAlertRegister = void 0;
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  text-align: center;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 26rem;\n  margin-top: 3rem;\n  text-align: center;\n  font: 700 2.2rem Roboto;\n  color: var(--text-primary);\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  height: 100vh;\n  max-width: 38rem; \n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var PageAlertRegister = _styledComponents.default.div(_templateObject());
-
-exports.PageAlertRegister = PageAlertRegister;
-
-var Title = _styledComponents.default.div(_templateObject2());
-
-exports.Title = Title;
-
-var SubTitle = _styledComponents.default.div(_templateObject3());
-
-exports.SubTitle = SubTitle;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/LayoutRegisterRestaurant/styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.LayoutContainer = void 0;
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  justify-items: start;\n  background-color: var(--background-secondary);\n\n  /* > button {\n    width: 90%;\n    max-width: 38rem;\n  }\n   */\n  \n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var LayoutContainer = _styledComponents.default.div(_templateObject());
-
-exports.LayoutContainer = LayoutContainer;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../../node_modules/react-icons/lib/esm/iconsManifest.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/components/core/RectButton/styles.js"}],"../../node_modules/react-icons/lib/esm/iconsManifest.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48474,7 +48109,498 @@ function FiZoomOut(props) {
 }
 
 ;
-},{"../lib":"../../node_modules/react-icons/lib/esm/index.js"}],"../app/components/core/HeaderNav/styles.js":[function(require,module,exports) {
+},{"../lib":"../../node_modules/react-icons/lib/esm/index.js"}],"../app/components/core/EyeToggleInput/styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.EyeIconOff = exports.EyeIcon = exports.LargeInput = exports.InputBlock = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _fi = require("react-icons/fi");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  width: 2.2rem;\n  height: 2.2rem;\n  color: var(--line-in-white);\n  position: absolute;\n  top: 48px;\n  right: 15px;\n  cursor: pointer;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  width: 2.2rem;\n  height: 2.2rem;\n  color: var(--line-in-white);\n  position: absolute;\n  top: 48px;\n  right: 15px;\n  cursor: pointer;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 5.6rem;\n  margin-top: 0.7rem;\n  border-radius: 0.8rem;\n  background: var(--background);\n  border: 1px solid var(--line-in-white);\n  outline: 0;\n  padding: 0 1.6rem;\n  font: 400 1.8rem Roboto;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-top: 2rem;\n  \n  > label {\n    font: 500 1.9rem Roboto;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var InputBlock = _styledComponents.default.div(_templateObject());
+
+exports.InputBlock = InputBlock;
+
+var LargeInput = _styledComponents.default.input(_templateObject2());
+
+exports.LargeInput = LargeInput;
+var EyeIcon = (0, _styledComponents.default)(_fi.FiEye)(_templateObject3());
+exports.EyeIcon = EyeIcon;
+var EyeIconOff = (0, _styledComponents.default)(_fi.FiEyeOff)(_templateObject4());
+exports.EyeIconOff = EyeIconOff;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","react-icons/fi":"../../node_modules/react-icons/fi/index.esm.js"}],"../app/components/core/EyeToggleInput/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _styles = require("./styles.js");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Input = function Input(_ref, ref) {
+  var label = _ref.label,
+      name = _ref.name,
+      placeholder = _ref.placeholder;
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      toggle = _useState2[0],
+      setToggle = _useState2[1];
+
+  function toggleVisibly() {
+    toggle ? setToggle(false) : setToggle(true);
+  }
+
+  return /*#__PURE__*/_react.default.createElement(_styles.InputBlock, null, /*#__PURE__*/_react.default.createElement("label", null, label), /*#__PURE__*/_react.default.createElement(_styles.LargeInput, {
+    type: toggle ? 'text' : 'password',
+    name: name,
+    ref: ref,
+    placeholder: placeholder
+  }), toggle && /*#__PURE__*/_react.default.createElement(_styles.EyeIcon, {
+    onClick: toggleVisibly
+  }) || /*#__PURE__*/_react.default.createElement(_styles.EyeIconOff, {
+    onClick: toggleVisibly
+  }));
+};
+
+var forwaredInput = (0, _react.forwardRef)(Input);
+var _default = forwaredInput;
+exports.default = _default;
+},{"react":"../../node_modules/react/index.js","./styles.js":"../app/components/core/EyeToggleInput/styles.js"}],"images/logo.png":[function(require,module,exports) {
+module.exports = "/logo.6023b87e.png";
+},{}],"../app/pages/Login/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Login;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _reactHookForm = require("react-hook-form");
+
+var _styles = require("./styles.js");
+
+var _Input = _interopRequireDefault(require("../../components/core/Input"));
+
+var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
+
+var _EyeToggleInput = _interopRequireDefault(require("../../components/core/EyeToggleInput"));
+
+var _logo = _interopRequireDefault(require("../../../assets/images/logo.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Login() {
+  var _useForm = (0, _reactHookForm.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      errors = _useForm.errors;
+
+  var history = (0, _reactRouterDom.useHistory)();
+
+  var onSubmit = function onSubmit(data) {
+    history.push('/AlertRegisterRestaurant');
+  };
+
+  return /*#__PURE__*/_react.default.createElement(_styles.PageLogin, null, /*#__PURE__*/_react.default.createElement(_styles.LogoContainer, null, /*#__PURE__*/_react.default.createElement(_styles.LogoImg, {
+    src: _logo.default,
+    alt: "OneMenu"
+  }), /*#__PURE__*/_react.default.createElement(_styles.Title, null, "O app que conecta voc\xEA ao seu cliente de maneira f\xE1cil e segura")), /*#__PURE__*/_react.default.createElement(_styles.Form, {
+    onSubmit: handleSubmit(onSubmit)
+  }, /*#__PURE__*/_react.default.createElement(_styles.Fieldset, null, /*#__PURE__*/_react.default.createElement(_Input.default, {
+    type: "email",
+    name: "email",
+    label: "E-mail",
+    placeholder: "Seu e-mail",
+    required: true,
+    ref: register
+  }), /*#__PURE__*/_react.default.createElement(_EyeToggleInput.default, {
+    type: "password",
+    name: "password",
+    label: "Senha",
+    placeholder: "Sua senha",
+    required: true,
+    ref: register
+  })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "Register"
+  }, /*#__PURE__*/_react.default.createElement(_styles.ForgetLink, null, "Esqueci meu e-mail ou senha")), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
+    name: "Entrar"
+  })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "Register"
+  }, /*#__PURE__*/_react.default.createElement(_styles.BottonLink, null, "Cadastre seu restaurante agora.")));
+}
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","./styles.js":"../app/pages/Login/styles.js","../../components/core/Input":"../app/components/core/Input/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx","../../components/core/EyeToggleInput":"../app/components/core/EyeToggleInput/index.jsx","../../../assets/images/logo.png":"images/logo.png"}],"images/banner.png":[function(require,module,exports) {
+module.exports = "/banner.d99271e5.png";
+},{}],"../app/pages/Register/styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Fieldset = exports.SubTitle = exports.Title = exports.Content = exports.BannerImg = exports.Header = exports.Container = exports.PageRegister = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  border: 0;\n  margin-top: 4.2rem;\n  margin-bottom: 1.6rem;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: 1.5rem;\n  text-align: left;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin-top: 8rem;\n  text-align: left;\n  font: 700 3rem Roboto;\n  color: var(--text-primary);\n  "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  width: 90%;\n  max-width: 38rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;  \n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  width: 34rem;\n  object-fit: cover;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  background: var(--primary);\n  display: flex;\n  align-items: center;\n  justify-content: center;  \n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 90%;\n  max-width: 38rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;  \n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: start;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var PageRegister = _styledComponents.default.div(_templateObject());
+
+exports.PageRegister = PageRegister;
+
+var Container = _styledComponents.default.div(_templateObject2());
+
+exports.Container = Container;
+
+var Header = _styledComponents.default.div(_templateObject3());
+
+exports.Header = Header;
+
+var BannerImg = _styledComponents.default.img(_templateObject4());
+
+exports.BannerImg = BannerImg;
+
+var Content = _styledComponents.default.div(_templateObject5());
+
+exports.Content = Content;
+
+var Title = _styledComponents.default.div(_templateObject6());
+
+exports.Title = Title;
+
+var SubTitle = _styledComponents.default.div(_templateObject7());
+
+exports.SubTitle = SubTitle;
+
+var Fieldset = _styledComponents.default.div(_templateObject8());
+
+exports.Fieldset = Fieldset;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/pages/Register/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Register;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _reactHookForm = require("react-hook-form");
+
+var _Input = _interopRequireDefault(require("../../components/core/Input"));
+
+var _banner = _interopRequireDefault(require("../../../assets/images/banner.png"));
+
+var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
+
+var _styles = require("./styles.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function Register() {
+  var _useForm = (0, _reactHookForm.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      errors = _useForm.errors;
+
+  var history = (0, _reactRouterDom.useHistory)();
+
+  var onSubmit = function onSubmit(data) {
+    history.push('/');
+  };
+
+  function noRegister() {
+    history.push('/AlertRegister');
+  }
+
+  return /*#__PURE__*/_react.default.createElement(_styles.PageRegister, null, /*#__PURE__*/_react.default.createElement(_styles.Header, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    id: "home-link",
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_styles.BannerImg, {
+    src: _banner.default,
+    alt: "banner onemenu"
+  }))), /*#__PURE__*/_react.default.createElement(_styles.Container, null, /*#__PURE__*/_react.default.createElement(_styles.Content, null, /*#__PURE__*/_react.default.createElement(_styles.Title, null, "Crie sua conta"), /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Cria seu conta para iniciar o cadastro do seu restaurante."), /*#__PURE__*/_react.default.createElement("form", {
+    onSubmit: handleSubmit(onSubmit)
+  }, /*#__PURE__*/_react.default.createElement(_styles.Fieldset, null, /*#__PURE__*/_react.default.createElement(_Input.default, {
+    type: "text",
+    name: "name",
+    label: "Nome",
+    placeholder: "Seu nome completo" // required
+    ,
+    ref: register
+  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    type: "email",
+    name: "email",
+    label: "E-mail",
+    placeholder: "Seu e-mail" // required
+    ,
+    ref: register
+  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    type: "email",
+    name: "confEmail",
+    label: "Confirma\xE7\xE3o de e-mail",
+    placeholder: "Seu e-mail" // required
+    ,
+    ref: register
+  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    type: "password",
+    name: "password",
+    label: "Senha",
+    placeholder: "Sua senha" // required
+    ,
+    ref: register
+  }), /*#__PURE__*/_react.default.createElement(_Input.default, {
+    type: "password",
+    name: "confPassword",
+    label: "Confirma\xE7\xE3o de senha",
+    placeholder: "Sua senha" // required
+    ,
+    ref: register
+  }), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
+    name: "Continuar"
+  }))))));
+}
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","../../components/core/Input":"../app/components/core/Input/index.jsx","../../../assets/images/banner.png":"images/banner.png","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx","./styles.js":"../app/pages/Register/styles.js"}],"../app/pages/AlertRegisterRestaurant/styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SubTitle = exports.Title = exports.PageAlertRegister = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: 3rem;\n  text-align: center;\n  font: 400 1.9rem Roboto;\n  color: var(--text-second);\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 26rem;\n  margin-top: 3rem;\n  text-align: center;\n  font: 700 2.2rem Roboto;\n  color: var(--text-primary);\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  height: 100vh;\n  max-width: 38rem; \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var PageAlertRegister = _styledComponents.default.div(_templateObject());
+
+exports.PageAlertRegister = PageAlertRegister;
+
+var Title = _styledComponents.default.div(_templateObject2());
+
+exports.Title = Title;
+
+var SubTitle = _styledComponents.default.div(_templateObject3());
+
+exports.SubTitle = SubTitle;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/LayoutRegisterRestaurant/styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.LayoutContainer = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  justify-items: start;\n  background-color: var(--background-secondary);\n\n  /* > button {\n    width: 90%;\n    max-width: 38rem;\n  }\n   */\n  \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var LayoutContainer = _styledComponents.default.div(_templateObject());
+
+exports.LayoutContainer = LayoutContainer;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/HeaderNav/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -77532,7 +77658,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54696" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60352" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
