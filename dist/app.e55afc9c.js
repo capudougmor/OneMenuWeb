@@ -37657,7 +37657,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 5rem;\n  margin: 2rem 0;\n  padding: 2rem;\n  background: var(--primary);\n  color: var(--button-text);\n  border: 0;\n  border-radius: 0.8rem;\n  cursor: pointer;\n  font: 700 1.8rem Roboto;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-decoration: none;\n  transition: background-color 0.2s;\n\n  &:hover {\n    background: var(--secundary-dark);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  min-width: 25rem;\n  height: 5rem;\n  margin: 2rem 0;\n  padding: 2rem 0;\n  background: var(--primary);\n  color: var(--button-text);\n  border: 0;\n  border-radius: 0.8rem;\n  cursor: pointer;\n  font: 700 1.8rem Roboto;\n  display: flex;\n  align-items: center;\n  align-self: center;\n  justify-content: center;\n  text-decoration: none;\n  transition: background-color 0.2s;\n\n  &:hover {\n    background: var(--secundary-dark);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -48551,7 +48551,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 90vw;\n  height: 100vh;\n  max-width: 38rem; \n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 95%;\n  height: 100vh;\n  max-width: 38rem; \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -48586,7 +48586,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  justify-items: start;\n  background-color: var(--background-secondary);\n\n  /* > button {\n    width: 90%;\n    max-width: 38rem;\n  }\n   */\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100vw;\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  justify-items: start;\n  background-color: var(--background-secondary);\n\n  /* > button {\n    width: 90%;\n    max-width: 38rem;\n  }\n   */\n  \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -48615,7 +48615,7 @@ var _fi = require("react-icons/fi");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  width: 6rem;\n  height: 6rem;\n  padding-right: 2rem;\n  color: #fff\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 6rem;\n  height: 6rem;\n  margin-right: 2.4rem;\n  color: #fff\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -48745,7 +48745,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin-bottom: 4rem;\n  padding: 3.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-items: center;\n  background-color: var(--background);\n  border-radius: 8px;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-bottom: 4rem;\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-items: center;\n  background-color: var(--background);\n  border-radius: 8px;\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -48755,7 +48755,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 38rem; \n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 38rem; \n  \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -48773,75 +48773,23 @@ exports.Container = Container;
 var CardContent = _styledComponents.default.div(_templateObject2());
 
 exports.CardContent = CardContent;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/OutsideButton/styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Container = void 0;
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 5rem;\n  background: var(--primary);\n  color: var(--button-text);\n  border: 0;\n  border-radius: 0.8rem;\n  cursor: pointer;\n  font: 700 1.8rem Roboto;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-decoration: none;\n  transition: background-color 0.2s;\n  margin: 2rem 0;\n  transition: 0.2s;\n\n  &:hover {\n    background: var(--secundary-dark);\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Container = _styledComponents.default.button(_templateObject());
-
-exports.Container = Container;
 },{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/OutsideButton/index.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-var _styles = require("./styles.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-var OutsideButton = function OutsideButton(_ref) {
-  var name = _ref.name,
-      goPath = _ref.goPath,
-      rest = _objectWithoutProperties(_ref, ["name", "goPath"]);
-
-  var history = (0, _reactRouterDom.useHistory)();
-
-  function goToLogin() {
-    history.push('/');
-  }
-
-  return /*#__PURE__*/_react.default.createElement(_styles.Container, _extends({
-    onClick: goToLogin,
-    type: "button"
-  }, rest), name);
-};
-
-var _default = OutsideButton;
-exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/components/core/OutsideButton/styles.js"}],"../app/components/core/Card/index.jsx":[function(require,module,exports) {
+// import React from 'react'
+// import { useHistory } from 'react-router-dom'
+// import { Container } from './styles.js'
+// const OutsideButton = ({ name, goPath, ...rest }) => {
+//   const history = useHistory();
+//   function goToLogin() {
+//     history.push('/')
+//   }
+//   return (
+//     <Container onClick={goToLogin} type='button' {...rest} >
+//       {name}
+//     </Container>
+//   )
+// }
+// export default OutsideButton
+},{}],"../app/components/core/Card/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -77294,63 +77242,11 @@ function NewRestauant() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SomaIcon = exports.SubIcon = exports.IconContainer = exports.CheckContent = exports.ScheduleDay = exports.Fieldset = exports.SubTitle = exports.Title = exports.Container = void 0;
+exports.Fieldset = exports.SubTitle = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _fa = require("react-icons/fa");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  width: 1.3rem;\n  height: 1.3rem;\n  color: #fff\n"]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  width: 1.3rem;\n  height: 1.3rem;\n  color: #fff\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n\n  > a {\n    width: 2.3rem;\n    height: 2.3rem;\n    background: var(--text-primary);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 6px;\n    margin-top: 8px;\n  }\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  width: 3rem;\n  height: 8rem;\n  display: flex;\n\n  > input {\n    width: 2.3rem;\n    height: 2.3rem;\n    cursor: pointer;\n  }  \n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 38rem;\n  display: grid;\n  grid-template-columns: 20px 1fr 1fr 1fr;\n  gap: 1.2rem;\n  align-items: end;\n  padding-bottom: 4rem;\n  border-bottom: 1px solid var(--line-in-white);\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject4() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n  border: 0;\n  margin-top: 4rem;\n  margin-bottom: 1.6rem;\n"]);
@@ -77383,7 +77279,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 95%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  div {\n    width: 100%;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -77409,23 +77305,215 @@ exports.SubTitle = SubTitle;
 var Fieldset = _styledComponents.default.div(_templateObject4());
 
 exports.Fieldset = Fieldset;
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../app/components/core/ActiditDays/styles.js":[function(require,module,exports) {
+"use strict";
 
-var ScheduleDay = _styledComponents.default.div(_templateObject5());
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SomaIcon = exports.SubIcon = exports.IconContainer = exports.Hourscontent = exports.CheckContent = exports.ScheduleDay = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _fa = require("react-icons/fa");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  width: 1.3rem;\n  height: 1.3rem;\n  color: #fff\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  width: 1.3rem;\n  height: 1.3rem;\n  color: #fff\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n\n  > span {\n    width: 2.3rem;\n    height: 2.3rem;\n    background: var(--text-primary);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 6px;\n    margin-top: 6px;\n  }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 38rem;\n  display: grid;\n  grid-template-columns:  120px 120px 50px;\n  gap: 1.2rem;\n  align-items: end;\n  justify-content: end;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 3rem;\n  margin-top: 2.4rem;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 1.2rem;  \n  \n  input {\n    width: 2.3rem;\n    height: 2.3rem;\n    cursor: pointer;\n  }  \n  \n  span {\n    font: 500 1.9rem Roboto;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 38rem;\n  padding-bottom: 2rem;\n  border-bottom: 1px solid var(--line-in-white);\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ScheduleDay = _styledComponents.default.div(_templateObject());
 
 exports.ScheduleDay = ScheduleDay;
 
-var CheckContent = _styledComponents.default.div(_templateObject6());
+var CheckContent = _styledComponents.default.label(_templateObject2());
 
 exports.CheckContent = CheckContent;
 
-var IconContainer = _styledComponents.default.div(_templateObject7());
+var Hourscontent = _styledComponents.default.div(_templateObject3());
+
+exports.Hourscontent = Hourscontent;
+
+var IconContainer = _styledComponents.default.div(_templateObject4());
 
 exports.IconContainer = IconContainer;
-var SubIcon = (0, _styledComponents.default)(_fa.FaMinus)(_templateObject8());
+var SubIcon = (0, _styledComponents.default)(_fa.FaMinus)(_templateObject5());
 exports.SubIcon = SubIcon;
-var SomaIcon = (0, _styledComponents.default)(_fa.FaPlus)(_templateObject9());
+var SomaIcon = (0, _styledComponents.default)(_fa.FaPlus)(_templateObject6());
 exports.SomaIcon = SomaIcon;
-},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","react-icons/fa":"../../node_modules/react-icons/fa/index.esm.js"}],"../app/pages/EditRestaurant/index.jsx":[function(require,module,exports) {
+},{"styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","react-icons/fa":"../../node_modules/react-icons/fa/index.esm.js"}],"../app/components/core/ActiditDays/index.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ActivitDays;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _styles = require("./styles.js");
+
+var _Input = _interopRequireDefault(require("../Input"));
+
+var _reactHookForm = require("react-hook-form");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function ActivitDays(_ref) {
+  var weekDay = _ref.weekDay;
+
+  var _useState = (0, _react.useState)([{
+    id: 0,
+    chequed: true,
+    from: '',
+    to: ''
+  }]),
+      _useState2 = _slicedToArray(_useState, 2),
+      hourOfDays = _useState2[0],
+      setHourOfDay = _useState2[1];
+
+  var _useForm = (0, _reactHookForm.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      errors = _useForm.errors;
+
+  var history = (0, _reactRouterDom.useHistory)();
+
+  var onSubmit = function onSubmit(data) {
+    history.push('/');
+  };
+
+  function noRegister() {
+    history.push('/AlertRegister');
+  }
+
+  function addNewHour() {
+    setHourOfDay([].concat(_toConsumableArray(hourOfDays), [{
+      id: hourOfDays.length + 1,
+      from: '',
+      to: ''
+    }]));
+  }
+
+  function removeHour(hourOfDay) {
+    var removedHour = hourOfDays.filter(function (hourOfDay) {
+      return hourOfDays.length !== hourOfDay.id;
+    });
+    setHourOfDay(removedHour);
+  }
+
+  return /*#__PURE__*/_react.default.createElement(_styles.ScheduleDay, null, /*#__PURE__*/_react.default.createElement(_styles.CheckContent, null, /*#__PURE__*/_react.default.createElement("input", {
+    name: "open",
+    type: "checkbox",
+    ref: register
+  }), /*#__PURE__*/_react.default.createElement("span", null, weekDay)), hourOfDays.map(function (hourOfDay, index) {
+    return /*#__PURE__*/_react.default.createElement(_styles.Hourscontent, {
+      key: hourOfDay.id
+    }, /*#__PURE__*/_react.default.createElement(_Input.default, {
+      type: "time",
+      name: "from",
+      placeholder: "Abre" // required
+      ,
+      ref: register
+    }), /*#__PURE__*/_react.default.createElement(_Input.default, {
+      type: "time",
+      name: "to",
+      placeholder: "Fecha" // required
+      ,
+      ref: register
+    }), /*#__PURE__*/_react.default.createElement(_styles.IconContainer, null, /*#__PURE__*/_react.default.createElement("span", {
+      onClick: removeHour
+    }, /*#__PURE__*/_react.default.createElement(_styles.SubIcon, null)), /*#__PURE__*/_react.default.createElement("span", {
+      onClick: addNewHour
+    }, /*#__PURE__*/_react.default.createElement(_styles.SomaIcon, null))));
+  }));
+}
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./styles.js":"../app/components/core/ActiditDays/styles.js","../Input":"../app/components/core/Input/index.jsx","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js"}],"../app/pages/EditRestaurant/index.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -77448,6 +77536,8 @@ var _index = _interopRequireDefault(require("../../components/core/Card/index.js
 var _index2 = _interopRequireDefault(require("../../components/core/Input/index.jsx"));
 
 var _RectButton = _interopRequireDefault(require("../../components/core/RectButton"));
+
+var _index3 = _interopRequireDefault(require("../../components/core/ActiditDays/index.jsx"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -77518,32 +77608,25 @@ function EditRestaurant() {
     placeholder: "Digite seu endere\xE7o" // required
     ,
     ref: register
-  }))), /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Hor\xE1rio de funcionamento"), /*#__PURE__*/_react.default.createElement(_styles.ScheduleDay, null, /*#__PURE__*/_react.default.createElement(_styles.CheckContent, null, /*#__PURE__*/_react.default.createElement("input", {
-    name: "open",
-    type: "checkbox",
-    ref: register
-  })), /*#__PURE__*/_react.default.createElement(_index2.default, {
-    type: "time",
-    name: "from",
-    label: "Segunda",
-    placeholder: "Abre" // required
-    ,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_index2.default, {
-    type: "time",
-    name: "to",
-    placeholder: "Fecha" // required
-    ,
-    ref: register
-  }), /*#__PURE__*/_react.default.createElement(_styles.IconContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_styles.SubIcon, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_styles.SomaIcon, null))))), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
+  }))), /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_styles.SubTitle, null, "Hor\xE1rio de funcionamento"), /*#__PURE__*/_react.default.createElement(_index3.default, {
+    weekDay: "Segunda"
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+    weekDay: "Ter\xE7a"
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+    weekDay: "Quarta"
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+    weekDay: "Quinta"
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+    weekDay: "Sexta"
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+    weekDay: "S\xE1bado"
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+    weekDay: "Domingo"
+  })), /*#__PURE__*/_react.default.createElement(_RectButton.default, {
     name: "Continuar"
   }))));
 }
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","./styles.js":"../app/pages/EditRestaurant/styles.js","../../components/core/LayoutRegisterRestaurant":"../app/components/core/LayoutRegisterRestaurant/index.jsx","../../components/core/Card/index.jsx":"../app/components/core/Card/index.jsx","../../components/core/Input/index.jsx":"../app/components/core/Input/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx"}],"../app/routes.jsx":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","react-hook-form":"../../node_modules/react-hook-form/dist/index.esm.js","./styles.js":"../app/pages/EditRestaurant/styles.js","../../components/core/LayoutRegisterRestaurant":"../app/components/core/LayoutRegisterRestaurant/index.jsx","../../components/core/Card/index.jsx":"../app/components/core/Card/index.jsx","../../components/core/Input/index.jsx":"../app/components/core/Input/index.jsx","../../components/core/RectButton":"../app/components/core/RectButton/index.jsx","../../components/core/ActiditDays/index.jsx":"../app/components/core/ActiditDays/index.jsx"}],"../app/routes.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -77658,7 +77741,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60352" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61635" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

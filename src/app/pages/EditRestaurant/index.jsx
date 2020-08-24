@@ -18,6 +18,7 @@ import LayoutRegisterRestaurant from '../../components/core/LayoutRegisterRestau
 import Card from '../../components/core/Card/index.jsx';
 import Input from '../../components/core/Input/index.jsx';
 import RectButton from '../../components/core/RectButton';
+import ActivitDays from '../../components/core/ActiditDays/index.jsx';
 
 export default function EditRestaurant() {
 
@@ -33,7 +34,7 @@ export default function EditRestaurant() {
   function noRegister() {
     history.push('/AlertRegister')
   }
-
+ 
   return (
     <LayoutRegisterRestaurant >
       <Container>
@@ -112,39 +113,13 @@ export default function EditRestaurant() {
           <Card >
             <SubTitle>Horário de funcionamento</SubTitle>
 
-            <ScheduleDay>
-              <CheckContent>
-                <input
-                  name="open"
-                  type="checkbox"
-                  ref={register}
-                />
-              </CheckContent>
-              <Input
-                type='time'
-                name='from'
-                label='Segunda'
-                placeholder='Abre'
-                // required
-                ref={register}
-              />
-              <Input
-                type='time'
-                name='to'
-                placeholder='Fecha'
-                // required
-                ref={register}
-              />
-              <IconContainer>
-                <Link to="/">
-                  <SubIcon />
-                </Link>
-
-                <Link to="/">
-                  <SomaIcon />
-                </Link>
-              </IconContainer>
-            </ScheduleDay>
+            <ActivitDays weekDay='Segunda' />
+            <ActivitDays weekDay='Terça' />
+            <ActivitDays weekDay='Quarta' />
+            <ActivitDays weekDay='Quinta' />
+            <ActivitDays weekDay='Sexta' />
+            <ActivitDays weekDay='Sábado' />
+            <ActivitDays weekDay='Domingo' />
           </Card>
 
           <RectButton name='Continuar' />

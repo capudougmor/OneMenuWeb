@@ -31,6 +31,6 @@ export const LogoImage = styled.img`
 export const MenuIcon = styled(FiMenu)`
   width: 6rem;
   height: 6rem;
-  padding-right: 2rem;
+  margin-right: 2.4rem;
   color: #fff
 `

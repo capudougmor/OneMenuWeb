@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PageAlertRegister = styled.div`
-  width: 90vw;
+  width: 95%;
   height: 100vh;
   max-width: 38rem; 
 `
